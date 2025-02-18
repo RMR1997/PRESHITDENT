@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Model Viewer</title>
+    <!-- Tambahkan model-viewer script -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <!-- Tambahkan AOS untuk animasi scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Hubungkan CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="img/PRESHITDENT.jpg" alt="Logo" class="logo-img" />
+        <span class="logo-text">PRESHITDENT</span>
+      </div>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">SOCIAL</a></li>
+        <li><a href="#">TELEGRAM</a></li>
+        <li><a href="#">DEXSCREENER</a></li>
+      </ul>
+    </nav>
+
+    <!-- Container Utama -->
+    <!-- <div class="container"> -->
+    <!-- Bagian Teks -->
+    <!-- <div class="text-container">
+        <h1>I'll update the website Later</h1>
+        <p></p>
+      </div> -->
+
+    <!-- Bagian Model 3D -->
+    <!-- <div class="model-container">
+        <model-viewer
+          src="models/cat2.glb"
+          alt="3D Model Cat"
+          auto-rotate
+          camera-controls
+          disable-zoom
+        >
+        </model-viewer>
+      </div>
+    </div> -->
+
+    <!-- Home Section -->
+    <section id="home-section" class="home-section section-bg py-5">
+      <div class="container" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="section-title">
+              <h1 class="text-black fw-bold">$PRESHITDENT</h1>
+              <p>FUCK THE PRESHITDENT WHO RUINED THE CRYPTO SPACE</p>
+              <p>will update the website later</p>
+              <p
+                id="copyButton2"
+                class="btn btn-outline-primary copy-button2"
+                onclick="copyToClipboard(this, '#')"
+              >
+                CA:
+              </p>
+            </div>
+
+            <!-- Tombol kiri-kanan -->
+            <div class="button-group">
+              <a
+                class="btn btn-lg btn-pink rounded-pill"
+                href="https://x.com/CryptoRuinedBy"
+                target="_blank"
+                >X</a
+              >
+              <a
+                class="btn btn-lg btn-pink rounded-pill"
+                href="https://t.me/PRESHITDENTPORTAL"
+                target="_blank"
+                >Telegram</a
+              >
+            </div>
+
+            <!-- Gambar animasi -->
+            <!-- <div
+              class="gif-container"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
+              <img
+                src="/img/PRESHITDENT.jpg"
+                alt="pict"
+                class="img-fluid rounded-pill"
+              />
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script AOS untuk animasi scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Fungsi Copy ke Clipboard
+      function copyToClipboard(element, text) {
+        navigator.clipboard.writeText(text);
+        element.innerText = "Copied!";
+        setTimeout(() => {
+          element.innerText = `CA: ${text}`;
+        }, 1500);
+      }
+    </script>
+  </body>
+</html>
